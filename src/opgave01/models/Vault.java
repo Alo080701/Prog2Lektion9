@@ -1,16 +1,16 @@
 package opgave01.models;
 
-public class StringVault {
-    private String secret;
+public class Vault<E> {
+    private E secret;
     private String password;
 
-    public StringVault(String secret, String password) {
+    public Vault(E secret, String password) {
         this.secret = secret;
         this.password = password;
     }
 
 
-    public String getStreng(String password) {
+    public E getSecret(String password) {
         if (password.equals(password)) {
             return secret;
         }
